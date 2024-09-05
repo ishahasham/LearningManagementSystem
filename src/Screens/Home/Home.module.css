@@ -1,0 +1,348 @@
+/* Home all pages CSS */
+  .icon {
+    vertical-align: middle;
+    line-height: 1px;
+    font-size: 27px;
+    cursor: pointer;
+  }
+  .iconheader {
+    vertical-align: middle;
+    line-height: 1px;
+    font-size: 26px;
+    cursor: pointer;
+  }
+  .icon, .iconheader {
+    margin-right: 5px;
+  }
+  /* Dashboard */
+  .gridcontainer {
+    display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: auto;
+  }
+  
+  .navbar{
+    flex: 0 0 60px; 
+    height: 60px;
+  }
+  .main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; 
+    margin-top: 60px; 
+    overflow: auto;
+  }
+  .ExamCard{
+    width: 100%;
+     max-width: 700px; 
+     background-color: rgba(238, 235, 235, 0.8); 
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 25px;
+  }
+
+
+  /* Header  */
+  .header {
+    grid-area: header;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px 0 30px;
+    box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
+    background-color: #5A0007;
+    color: white;
+  }
+
+  .bold{
+    font-size: 22px;
+    padding-top: 2px;
+  }
+  
+  .menuicon {
+    display: none;
+    cursor: pointer;
+  }
+
+  .headerleft {
+    display: flex;
+    align-items: center;
+  }
+
+  .headerright {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    position: relative;
+  }
+  .personContainer {
+    position: relative; 
+    cursor: pointer;
+  }
+  
+  .logoutButton {
+    margin-top: 5px; 
+    background-color: #5A0007; /* Maroon background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .logoutButton:hover {
+    background-color: #7b0a11; 
+  }
+  /* End Header  */
+  
+  /* Sidebar  */
+  #sidebar {
+    grid-area: sidebar;
+    height: 100%;
+    background-color: #5A0007;
+    overflow: hidden;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transform: translateX(-100%); 
+    color: #fff;
+    width: 200px;
+  }
+  
+  .sidebarList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    height: auto; 
+    max-height: 580px; 
+    overflow-y: auto; 
+  }
+
+  .sidebarListItem {
+    position: relative;
+    display: flex;
+    align-items: center; 
+   
+  }
+  
+  
+  .sidebarListItem:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  .sidebarListItem > a {
+    text-decoration: none;
+    color: #5A0007;
+    font-size: 16px;
+  }
+
+
+  .sidebarresponsive {
+    display: block;
+    position: absolute;
+    z-index: 12;
+    width: 260px;
+    color: #fff;
+    background-color: #5A0007;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(0); 
+    box-shadow: #1f2124;
+  }
+
+
+  .sidebarListItem {
+    padding: 20px;
+    font-size: 18px;
+    position: relative;
+}
+
+.dropdownIcon {
+    margin-left: 10px;
+    cursor: pointer;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+}
+
+.dropdownMenu {
+  color: rgb(10, 10, 10);
+  position: absolute;
+  left: 100%;
+  top: 0;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.menuItemLink {
+  color: #000000;
+  text-decoration: none;
+  padding: 8px 12px; 
+  display: block;
+}
+
+.menuItemLink:hover {
+    background-color: rgba(0, 0, 0, 0.1); 
+}
+
+  /* Sidebar Dropdown */
+
+  
+  /* End Sidebar  */
+  
+
+  @media screen and (max-width: 992px) {
+    .gridcontainer {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.2fr 3fr;
+      grid-template-areas:
+        'header'
+    }
+  
+    #sidebar {
+      display: none;
+    }
+  
+    .menuicon {
+      display: inline;
+    }
+  
+    .sidebartitle > span {
+      display: inline;
+    }
+
+    .sidebarList{
+      width:100%;
+    }
+
+    
+  /* Sidebar Dropdown */
+.dropdownIcon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.dropdownMenu {
+ 
+  color: rgb(0, 0, 0);
+}
+
+.menuItemLink {
+  color: #000000;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  width: 100%;
+}
+
+.menuItemLink:hover {
+  color: rgb(43, 41, 41);
+}
+
+/* All media query */
+  
+  @media screen and (max-width: 576px) {
+    .headerleft {
+      display: block;
+    }
+    .iconheader {
+      display: block; 
+    }
+  }
+
+}
+@media (max-width: 768px) {
+  .ExamCard {
+    max-width: 90%; 
+    padding: 12px;
+  }
+  .logoutButton {
+    display: block; 
+    width: 100%; 
+    text-align: center; 
+
+  }
+}
+
+ 
+@media screen and (max-width: 992px) {
+  .gridcontainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      'header'
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  .menuicon {
+    display: inline;
+  }
+
+  .sidebartitle > span {
+    display: inline;
+  }
+
+  .bold {
+    display: none;
+  }
+  .sidebarList{
+    display: none;
+  }
+}
+
+.showSidebarList {
+  display: block;
+}
+
+@media screen and (max-width: 992px) {
+  .sidebarList {
+    display: none;
+  }
+
+  .sidebarresponsive .sidebarList {
+    display: block;
+  }
+
+  .sidebarListItem > a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  
+}
+@media screen and (max-width: 992px) {
+  .sidebarListItem {
+    position: relative; 
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .sidebarListItem > a {
+    color: white; 
+  }
+
+  .dropdownMenu {
+    position: static; 
+    color: rgb(0, 0, 0);
+    box-shadow: none;
+    margin-top: 5px; 
+    width: 100%;
+  }
+
+  .menuItemLink {
+    padding: 10px;
+    color: #000000; 
+  }
+
+  .dropdownIcon{
+    color: #fff !important;
+  }
+}

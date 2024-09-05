@@ -1,0 +1,19 @@
+.AdmissionRegistrationMain {
+  display: flex;
+  flex-direction: column;
+  height: 125vh;
+  }
+  
+  .homeContainer {
+    flex: 0 0 60px; 
+    height: 60px;
+  }
+  
+  .registrationContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin-top: 10px;
+    overflow: auto;
+  }

@@ -1,0 +1,21 @@
+:root {
+    --swal-bg: #87000A;
+    --swal-text: white;
+    --swal-button-bg: #5A0007;
+    --swal-button-text: white;
+  }
+  
+  .swal-container {
+    background-color: var(--swal-bg) !important;
+  }
+  
+  .swal-title,
+  .swal-content {
+    color: var(--swal-text) !important;
+  }
+  
+  .swal-confirm-button {
+    background-color: var(--swal-button-bg) !important;
+    color: var(--swal-button-text) !important;
+  }
+  

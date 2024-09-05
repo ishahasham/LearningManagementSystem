@@ -1,0 +1,38 @@
+.ExamMain {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: auto;
+    }
+    
+    .homeContainer {
+      flex: 0 0 60px; 
+      height: 60px;
+    }
+    
+    .registrationContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      margin-top: 20px;
+      overflow: auto;
+    }
+
+    .ExamCard{
+      width: 100%;
+       max-width: 700px; 
+       background-color: rgba(238, 235, 235, 0.8); 
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+      padding: 16px;
+      border-radius: 8px;
+      font-size: 25px;
+    }
+
+    @media (max-width: 768px) {
+      .ExamCard {
+        max-width: 90%; 
+        padding: 12px;
+      }
+    
+    }
